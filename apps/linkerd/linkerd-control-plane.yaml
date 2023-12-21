@@ -23,6 +23,21 @@ spec:
   syncPolicy:
     automated: {}
   ignoreDifferences:
+  - group: batch
+    jsonPointers:
+      - /spec/schedule
+    kind: CronJob
+    name: linkerd-heartbeat
+  - group: apps
+    jsonPointers:
+      - /spec/template/metadata/annotations/checksum~1config
+    kind: Deployment
+    name: linkerd-destination
+  - group: apps
+    jsonPointers:
+      - /spec/template/metadata/annotations/checksum~1config
+    kind: Deployment
+    name: linkerd-proxy-injector
   - group: ""
     kind: Secret
     name:  linkerd-proxy-injector-k8s-tls
