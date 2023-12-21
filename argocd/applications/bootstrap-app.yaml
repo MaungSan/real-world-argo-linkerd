@@ -12,10 +12,10 @@ metadata:
 spec:
   source:
     path: apps/bootstrap
-    repoURL: 'https://github.com/kflynn/real-world-argo-linkerd.git'
+    repoURL: "https://github.com/maungsan/real-world-argo-linkerd.git"
     targetRevision: main
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: "https://kubernetes.default.svc"
   project: default
   syncPolicy:
     automated:
